@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.invalid-message {
+  display: none;
+}
+
+.is-invalid:not(:focus):not(:placeholder-shown) + .invalid-message {
+   display: block;
+}

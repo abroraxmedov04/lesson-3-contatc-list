@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="bg-dark p-2">
+      <h1 class="text-center text-light">Contact List</h1>
+    </header>
+
+    <!-- main -->
+
+    <main>
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col mt-5">
+            <div class="p-2">
+              <form class="js-form">
+                <input
+                  type="text"
+                  placeholder="Enter your name..."
+                  class="form-control mb-3 js-input-name"
+                  required
+                />
+
+                <input
+                  type="text"
+                  list="relative"
+                  placeholder="Select relationship..."
+                  class="form-control mb-3 js-input-relative"
+                  required
+                />
+                <datalist id="relative">
+                  <option value hidden>Choose your relationship</option>
+                  <option value="friends"></option>
+                  <option value="family"></option>
+                  <option value="relatives"></option>
+                </datalist>
+
+                <input
+                  type="tel"
+                  pattern="[+]\d{12}"
+                  placeholder="Enter phone number..."
+                  class="form-control mb-3 js-input-number"
+                  required
+                />
+
+                <button
+                  type="Submit"
+                  class="btn btn-success js-btn-add-contatc"
+                >
+                  Create new contact
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col mt-5">
+            <div class="p-2">
+              <ul class="list-group js-list-contact">
+                <li class="list-group-item">
+                  <strong class="list-name">Abror</strong>
+                  <p class="list-relatives">relative</p>
+                  <a class="list-num" href="tel:+998904291511"
+                    >+99 890 429 1511</a
+                  >
+                  <button
+                    class="btn btn-danger d-block js-delete-list-btn mt-2"
+                  >
+                    Delete Contact
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <template class="js-template">
+      <li class="list-group-item">
+        <strong class="list-name"></strong>
+        <p class="list-relatives"></p>
+        <a class="list-num" href="tel:+998904291511"></a>
+        <button class="btn btn-danger d-block js-delete-list-btn mt-2"></button>
+      </li>
+    </template>
+    <script src="/main.js"></script>
+  </body>
+</html>
